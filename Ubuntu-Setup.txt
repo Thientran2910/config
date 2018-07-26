@@ -1,0 +1,55 @@
+----Git
+sudo apt install git-all
+
+---- Rar Unrar
+sudo apt-get update
+sudo apt-get install rar unrar
+
+----Curl
+sudo apt install curl
+
+---- yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+
+---- Unikey
+sudo apt-get install ibus-unikey
+ibus restart
+
+----Nodejs
+sudo apt-get install nodejs
+sudo apt-get install npm
+
+----Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install oracle-java8-installer
+
+
+---- ZSH, Oh-my-ZSH
+sudo apt-get install zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+-- Cài đặt plugin zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+--- ADB :
+sudo ln -s ~/Android/Sdk/platform-tools/adb /usr/bin/adb
+
+---- Config ~/bashrc:
+#Sdk
+export PATH=${PATH}:~/Android/Sdk/tools
+export PATH=${PATH}:~/Android/Sdk/platform-tools
+
+#Zsh
+exec zsh
+
+---- git:
+git config --global color.ui true
+git config --global user.name "Thien Tran"
+git config --global user.email "thientran2910@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "thientran2910@gmail.com"
+cat ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+

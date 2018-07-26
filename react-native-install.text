@@ -1,0 +1,8 @@
+CRNA:
+sudo npm install -g create-react-native-app
+
+React Native CLI:
+sudo npm install -g react-native-cli
+
+Expo CLI:
+sudo npm install expo-cli --global
