@@ -1,0 +1,11 @@
+Step 1: sudo mv ubuntu-spinner-logo /usr/share/plymouth/themes
+
+Step 2: sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/ubuntu-spinner-logo/ubuntu-spinner-logo.plymouth 200
+
+Step 3: sudo update-alternatives --config default.plymouth
+
+Step 4: Select ubuntu-spinner-logo either 0, 1, 2, 3, 4 ect......
+
+Step 5: sudo update-initramfs -u
+
+Background can easily be replaced with a background of your choice :-)
