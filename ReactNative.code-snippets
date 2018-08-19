@@ -8,26 +8,26 @@
 	// Example:
 	"Print to console": {
 		"scope": "javascript,typescript",
-		"prefix": "cl",
+		"prefix": "clg",
 		"body": [
-			"console.log('$1');$0",
+			"console.log($0);",
 		],
 		"description": "Log output to console"
 	},
 
-	"Change State": {
+	"setState() func": {
 		"scope": "javascript,typescript",
 		"prefix": "sst",
 		"body": [
-			"this.setState((prevState) => {$0})",
+			"this.setState({$0})",
 		],
-		"description": "Change State"
+		"description": "setState() func"
 	},
 
 	"Set Style": {
 		"prefix": "sss",
 		"body": [
-			"style={styles.${1:styleName}}$0",
+			"style={$0}",
 		],
 		"description": "Set Style"
 	},
@@ -35,9 +35,9 @@
 	"React Native Component": {
         "prefix": "imrnc",
         "body": [
-            "import React, { Component } from \"react\";",
+            "import React from \"react\";",
             "import { View, Text, StyleSheet } from \"react-native\";",
-            "\nexport default class ${1:componentName} extends Component {",
+            "\nexport default class ${1:componentName} extends React.Component {",
             "\trender() {",
             "\t\treturn (",
             "\t\t\t<View style={styles.container}>",
@@ -59,15 +59,15 @@
 
 	"Import Module from react": {
 		"scope": "javascript,typescript",
-		"prefix": "imrc",
-		"body": ["import React, { Component } from 'react';$0"],
+		"prefix": "imrr",
+		"body": ["import React from 'react';$0"],
 		"description": "Import module from react"
 	},
 
 	"Import from react-native": {
 		"scope": "javascript,typescript",
 		"prefix": "imrn",
-		"body": ["import { View, Text, StyleSheet$1 } from 'react-native';$0"],
+		"body": ["import { View, Text, StyleSheet,$0 } from 'react-native';"],
 		"description": "Import from react-native"
 	},
 
@@ -108,9 +108,8 @@
 		"prefix": "tss",
 		"body": [
 			"style={{",
-			"\tfontSize: $1,",
-			"\tcolor: '#$2',",
-			"\tfontWeight: '$3',$0",
+			"\tcolor: '#$1',",
+			"\tfontSize: '$2',$0",
 			"}}"
 		],
 		"description": "Set Style For View"
