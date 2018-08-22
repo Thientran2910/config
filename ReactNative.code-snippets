@@ -90,8 +90,8 @@
 		"description": "React Native StyleSheet"
 	},
 
-	"View Style": {
-		"prefix": "vss",
+	"Set Style": {
+		"prefix": "sty",
 		"body": [
 			"style={{",
 			"\tflex: 1,",
@@ -101,19 +101,6 @@
 			"\talignItems: '${4:center}',$0",
 			"}}"
 		],
-		"description": "Set Style For View"
-	},
-
-	"Text Style": {
-		"prefix": "tss",
-		"body": [
-			"style={{",
-			"\tcolor: '#$1',",
-			"\tfontSize: '$2',$0",
-			"}}"
-		],
-		"description": "Set Style For View"
+		"description": "Set Style"
 	}
-
-
 }
