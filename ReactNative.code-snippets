@@ -89,18 +89,4 @@
 		],
 		"description": "React Native StyleSheet"
 	},
-
-	"Set Style": {
-		"prefix": "sty",
-		"body": [
-			"style={{",
-			"\tflex: 1,",
-			"\tflexDirection: '${1:row}',",
-			"\tbackgroundColor: '${2:#FFFFFF}',",
-			"\tjustifyContent: '${3:center}',",
-			"\talignItems: '${4:center}',$0",
-			"}}"
-		],
-		"description": "Set Style"
-	}
 }
