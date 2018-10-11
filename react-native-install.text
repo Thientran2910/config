@@ -6,3 +6,8 @@ sudo npm install -g react-native-cli
 
 Expo CLI:
 sudo npm install expo-cli --global
+
+Isuee:
+
+react-native start --reset-cache
+react-native run-ios
